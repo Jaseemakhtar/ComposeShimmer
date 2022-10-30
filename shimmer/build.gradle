@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.jaseemakhtar.compose.shimmer'
+    compileSdk 33
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs += [
+                "-Xjvm-default=all"
+        ]
+    }
+
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.2.0'
+    }
+}
+
+dependencies {
+    def composeVersion = '1.2.0'
+
+    implementation "androidx.compose.ui:ui:$composeVersion"
+    implementation "androidx.compose.material:material:$composeVersion"
+}
