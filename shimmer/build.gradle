@@ -24,12 +24,12 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0'
+        kotlinCompilerExtensionVersion '1.1.1'
     }
 }
 
 dependencies {
-    def composeVersion = '1.2.0'
+    def composeVersion = '1.1.1'
 
     implementation "androidx.compose.ui:ui:$composeVersion"
     implementation "androidx.compose.material:material:$composeVersion"
@@ -43,7 +43,7 @@ afterEvaluate {
 
                 groupId = 'com.github.Jaseemakhtar'
                 artifactId = 'compose.shimmer'
-                version = '1.0.0'
+                version = '1.0.2'
             }
         }
     }
