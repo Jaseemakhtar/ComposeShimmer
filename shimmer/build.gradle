@@ -8,6 +8,14 @@ android {
     namespace 'com.jaseemakhtar.compose.shimmer'
     compileSdk 33
 
+    defaultConfig {
+        minSdk = 24
+        targetSdk = 33
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -15,9 +23,6 @@ android {
 
     kotlinOptions {
         jvmTarget = '1.8'
-        freeCompilerArgs += [
-                "-Xjvm-default=all"
-        ]
     }
 
     buildFeatures {
